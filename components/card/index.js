@@ -12,10 +12,15 @@ export default class Card extends React.Component {
           style={{ width: '100%' }}
         />
         <div className={styles.container}>
-          <h4><b>John Doe</b></h4>
-          <p>Architect & Engineer</p>
+          <h4><b>{this.props.name}</b></h4>
+          <p>{this.props.job}</p>
         </div>
       </div>
     );
   }
 }
+
+Card.propTypes = {
+  name: PropTypes.string,
+  job: PropTypes.string,
+};

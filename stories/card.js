@@ -8,6 +8,6 @@ import Card from '../components/card';
 const labelStory = storiesOf('Card', module);
 
 labelStory.add('simple', () => {
-  return <Card />;
+  return <Card name='Ivo Ivić' job='programer' />;
 });
 
