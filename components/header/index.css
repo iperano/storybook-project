@@ -1,0 +1,14 @@
+.header {
+  height: 80px;
+  font-size: 60px;
+  margin: auto;
+  width: 100%;
+  padding: 0px;
+  background-color: red;
+  position: relative;
+  text-align: center;
+}
+
+img {
+  height: 80px;
+}
