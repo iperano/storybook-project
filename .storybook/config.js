@@ -8,6 +8,7 @@ function loadStories() {
   require('../stories/header.js');
   require('../stories/navigation.js');
   require('../stories/footer.js');
+  require('../stories/roundiconbutton.js');
 }
 
 configure(loadStories, module);

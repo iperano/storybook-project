@@ -5,20 +5,19 @@
   cursor: pointer;
   outline: none;
   color: #fff;
-  background-color: black;
+  background-color: green;
   border: none;
-  border-radius: 15px;
+  size: 15px 50px;
   box-shadow: 0 9px #999;
 }
 
 .button:disabled {
-  background-color: #7a7a7a !important;
+  opacity: 0.6;
   cursor: not-allowed;
-  box-shadow: 0 9px #3f3f3f;
 }
 
 .button:hover {
-  background-color: #3e8e41
+  background-color: #4CAF50; /* Green */
 }
 
 .button:active {

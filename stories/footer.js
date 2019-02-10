@@ -5,26 +5,30 @@ import { action } from '@storybook/addon-actions';
 /* eslint-enable */
 import Footer from '../components/footer';
 import Header from '../components/header';
+import Main from '../components/main';
 
 const footerStory = storiesOf('Footer', module);
 
 const links = [
   {
     id: 1,
-    content: <a href="twitter.com">Twitter</a>,
+    content: <a href="http://twitter.com">Twitter</a>,
     active: true,
   },
   {
     id: 2,
-    content: <a href="facebook.com">Facebook</a>,
+    content: <a href="http://facebook.com">Facebook</a>,
+    active: true,
   },
   {
     id: 3,
-    content: <a href="instagram.com">Instakram</a>,
+    content: <a href="http://instagram.com">Instagram</a>,
+    active: true,
   },
   {
     id: 4,
-    content: <a href="linkedin.com">LinkedIn</a>,
+    content: <a href="http://linkedin.com">LinkedIn</a>,
+    active: true,
   },
 ];
 
@@ -33,14 +37,15 @@ footerStory.add('simple', () => {
 });
 
 footerStory.add('final', () => {
-  return <Footer links={links} />;
+  return <Footer links={links} text="Duff Brewery" />;
 });
 
 footerStory.add('header & footer', () => {
   return (
     <div>
       <Header>Bok</Header>
-      <Footer>Pozdrav</Footer>
+      <Main></Main>
+      <Footer links={links} text="Duff Brewery" />
     </div>
   )
 })

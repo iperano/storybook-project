@@ -1,9 +1,33 @@
-.card {
-  max-width: 250px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+.roundiconbutton {
+  font-size: 24px;
   text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: green;
+  border: none;
+  border-radius: 15px;
+  width: 120px;
+  height: 32px;
 }
 
-.container {
-  padding: 2px 16px;
+.roundiconbutton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.roundiconbutton:hover {
+  background-color: #4CAF50; /* Green */
+}
+
+.roundiconbutton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.roundiconbutton.inactive {
+  background-color: rgb(233, 97, 97) !important;
+  box-shadow: 0 9px #3f3f3f;
 }

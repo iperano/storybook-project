@@ -12,5 +12,9 @@ headerStory.add('simple', () => {
 });
 
 headerStory.add('image', () => {
-  return <Header><img src="https://seeklogo.com/images/D/duff-beer-logo-3AA4218F1D-seeklogo.com.png" /></Header>;
+  return <Header
+    imgUrl="https://seeklogo.com/images/D/duff-beer-logo-3AA4218F1D-seeklogo.com.png"
+    class="" 
+    text="Duff Brewery">
+  </Header>;
 });

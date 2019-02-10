@@ -6,15 +6,28 @@ import styles from './index.css';
 export default class Header extends React.Component {
   render() {
     return (
-      <div className={styles.header}>
+    /*  <div className={styles.header}>
         {
           this.props.children
         }
       </div>
+      */
+    <div className={styles.main} >
+      <div className={styles.headerLogo} >
+        <img src={this.props.imgUrl} className={styles.logo} />
+      </div>
+      <div className={styles.headerText} >
+        {this.props.text}
+      </div>
+    </div>
     );
+    
+
   }
 }
 
 Header.propTypes = {
-  children: PropTypes.node,
+  imgUrl: PropTypes.string,
+  imgClass: PropTypes.string,
+  text: PropTypes.string,
 };

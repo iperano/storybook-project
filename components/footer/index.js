@@ -6,20 +6,27 @@ import styles from './index.css';
 export default class Footer extends React.Component {
   render() {
     return (
-      <div className={styles.footer}>
-        {
-          //this.props.children
-        <ul>
+      <div className={styles.main} >
+        <div className={styles.footerText} >
+          {this.props.text}
+        </div>
+        <div className={styles.footerLinks}>
           {
-            this.props.links.map(link => (<li key={link.id} className={link.active ? styles.active : undefined}>{link.content}</li>))
+          <ul className={styles.footerLinks}>
+            {
+              this.props.links.map(link => (<li key={link.id} className={link.active ? styles.active : undefined}>{link.content}</li>))
+            }
+          </ul>
           }
-        </ul>
-        }
+        </div>
       </div>
     );
   }
 }
 
 Footer.propTypes = {
-  children: PropTypes.node,
+  imgUrl: PropTypes.string,
+  imgClass: PropTypes.string,
+  text: PropTypes.string,
+  links: PropTypes.array
 };

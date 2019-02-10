@@ -1,38 +1,65 @@
-.footer {
-  padding: 0px;
-  margin: 30px auto 0px auto;
-  width: 100%;
-  min-height: 30px;
-  background-color: #333;
+.main {
+  background-color:#ed3237;
+  width: 100%;  
+  /*height: 50px;  */
+  border-radius: 5px;
+  display: flex;
+}
+
+.footerLinks {
+  text-align: left; 
+  width: 80%;
+  font-size: 12px; 
   position: relative;
+  color: black;
+  display: block;
+}
+
+.footerText {
+  padding: 10px 10px 10px 10px;
+  text-align: left; 
+  font-size: 20px; 
+  width: 20%;
   color: white;
 }
 
-.footer ul {
-  list-style-type: node;
+ul {
+  list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color:#333;
+  text-align: left;
 }
 
-.footer li {
-  display: inline;
-  border-right: 1px solid white;
-}
-
-.footer li a {
-  display: inline-block;
-  padding: 10px 16px;
+li a:hover {
+  background-color: rgb(175, 76, 76);
   color: white;
-  text-align: center;
+}
+
+
+li {
+  display: block;
+  float: left;
+}
+
+li a {
+  display: block;
+  text-align: left;
+  padding: 15px 20px;
+  border: 2px 2px 2px 2px;
   text-decoration: none;
 }
 
-.footer li:not(.active) a:hover {
+li:not(.active) a:hover {
   background-color: #111;
 }
 
-.footer a {
-  background-color: aqua;
+a {
+  color: black;
+  background-color: rgb(255, 0, 0);
+}
+
+li .active {
+  display: block;
+  background-color: #4CAF50; /* Green */
 }
