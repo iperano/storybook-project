@@ -8,7 +8,12 @@ export default class Footer extends React.Component {
     return (
       <div className={styles.footer}>
         {
-          this.props.children
+          //this.props.children
+        <ul>
+          {
+            this.props.links.map(link => (<li key={link.id} className={link.active ? styles.active : undefined}>{link.content}</li>))
+          }
+        </ul>
         }
       </div>
     );
