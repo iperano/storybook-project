@@ -1,18 +1,17 @@
 .button {
-  padding: 15px 25px;
-  font-size: 24px;
-  text-align: left;
+  padding: 10px 50px;
+  font-size: 14px;
+  text-align: center;
   cursor: pointer;
   outline: none;
   color: #fff;
   background-color: green;
   border: none;
-  size: 15px 50px;
-  box-shadow: 0 9px #999;
+  border-radius: 5px;
 }
 
 .button:disabled {
-  opacity: 0.6;
+  opacity: 0.4;
   cursor: not-allowed;
 }
 
@@ -24,4 +23,16 @@
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+.emptyButton {
+  padding: 10px 30px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: rgb(128, 128, 128);
+  background-color: #fefefe;
+  border: 1px;
+  border-radius: 5px;
 }

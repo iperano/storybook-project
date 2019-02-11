@@ -5,19 +5,40 @@ import styles from './index.css';
 export default class Card extends React.Component {
   render() {
     return (
-      <div className={styles.card}>
-        <img src={this.props.imgUrl} style={{ maxWidth: '200px', maxHeight: '200px' }} />
-        <div className={styles.container}>
-          <h4>{this.props.name}</h4>
-          <p>{this.props.tagline}</p>
+      <div name='divMain' id={this.props.id} className={styles.card} >
+        <div className={styles.cardTop} >
+          <div className={styles.iconTop} >
+            <img id={this.props.id} src={this.props.iconFavorites} className={styles.productIcon} onClick={this.props.onClickFavorites} />
+          </div>
+          <div className={styles.imageTop}>
+            <img id={this.props.id} src={this.props.imgUrl} className={styles.productImg} />
+          </div>
+          <div className={styles.iconTop} >
+            <img id={this.props.id} src={this.props.iconCart} className={styles.productIcon} onClick={this.props.onClickCart} />
+          </div>
+          <div className={styles.iconTop} >
+            <img id={this.props.id} src={this.props.iconDetails} className={styles.productIcon} onClick={this.props.onClickDetails} />
+          </div>
+        </div>
+        <div className={styles.divText}>
+          <h4 className={styles.title}> {this.props.name}</h4>
+          <p className={styles.block_with_text}> {this.props.description}</p>
         </div>
       </div>
     );
   }
 }
 
-Card.propTypes = {
+Card.PropTypes = {
   imgUrl: PropTypes.string,
   name: PropTypes.string,
   tagline: PropTypes.string,
+  description: PropTypes.string,
+  id: PropTypes.integer,
+  iconFavorites: PropTypes.string,
+  iconDetails: PropTypes.string,
+  iconCart: PropTypes.string,
+  onClickFavorites: PropTypes.func,
+  onClickDetails: PropTypes.func,
+  onClickCart: PropTypes.func,
 };

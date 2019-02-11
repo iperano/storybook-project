@@ -11,15 +11,12 @@ buttonStory.add('with text', () => (
   <Button text={'Press me!'}></Button>
 ));
 
-
 buttonStory.add('disabled', () => (
-  <Button text="Can't Press me!" disabled={true}></Button>
+  <Button text="Disabled!" disabled={true}></Button>
 ));
 
 buttonStory.add('with on click handler', () => (
   <Button text="Press me!" onClick={action('clicked')} ></Button>
 ));
-buttonStory.add('with test2 handler', () => (
-  <Button text="Press me again!" onClick={action('clicked')} ></Button>
-));
+
 
