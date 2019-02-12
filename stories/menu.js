@@ -10,7 +10,7 @@ const navigationmenuStory = storiesOf('Navigation Menu', module);
 const links = [
   {
     id: 1,
-    content: <a href="google.com">Google</a>,
+    content: <a href="http://google.com">Google</a>,
     active: true,
   },
   {

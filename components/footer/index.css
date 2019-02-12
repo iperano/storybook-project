@@ -1,5 +1,5 @@
-.main {
-  background-color:#040404;
+.footer {
+  background-color:#ed3237;
   width: 100%;  
   /*height: 50px;  */
   border-radius: 5px;
@@ -13,6 +13,7 @@
   position: relative;
   color: #040404;
   display: block;
+  background-color:#ed3237;
 }
 
 .footerText {
@@ -22,44 +23,41 @@
   width: 20%;
   color: #fefefe;
 }
-
-ul {
+.footer ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  text-align: left;
+
 }
 
-li a:hover {
-  background-color: #ed3237;
-  color: white;
+.footer li a:hover {
+  background-color: rgb(250, 116, 116);
 }
 
 
-li {
-  display: block;
+.footer li {
   float: left;
 }
 
-li a {
+.footer li a {
   display: block;
-  text-align: left;
-  padding: 15px 20px;
-  border: 2px 2px 2px 2px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
 }
 
-li:not(.active) a:hover {
+.footer li:not(.active) a:hover {
   background-color: #040404;
 }
 
-a {
+.footer a {
   color: black;
   background-color: #ed3237;
 }
 
-li .active {
+.footer li .active {
   display: block;
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50;
 }

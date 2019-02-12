@@ -6,7 +6,7 @@ import styles from './index.css';
 export default class Footer extends React.Component {
   render() {
     return (
-      <div className={styles.main} >
+      <div className={styles.footer} >
         <div className={styles.footerText} >
           {this.props.text}
         </div>
