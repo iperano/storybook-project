@@ -8,6 +8,8 @@ import beers from './beers.json';
 
 const cardStory = storiesOf('Card', module);
 
+
+//Jedno pivo
 cardStory.add('simple', () => (
     <Card
       imgUrl="https://images.punkapi.com/v2/keg.png"
@@ -26,6 +28,8 @@ cardStory.add('simple', () => (
       ></Card>
 ));
 
+
+//Lista piva
 cardStory.add('all beers', () => {
   const cards = beers.map(beer => <Card
         id={beer.id}

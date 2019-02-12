@@ -7,7 +7,7 @@ import Button from '../components/button';
 
 const buttonStory = storiesOf('Button', module);
 
-buttonStory.add('with text', () => (
+buttonStory.add('just text', () => (
   <Button text={'Press me!'}></Button>
 ));
 

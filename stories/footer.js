@@ -31,17 +31,19 @@ const links = [
     active: true,
   },
   {
-    id: 4,
+    id: 5,
     content: <a href="http://github.com"><img border="0" alt="Github" src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_circle_black-512.png" width="30" height="30"/></a>,
     active: true,
   },
 ];
 
 
-footerStory.add('final', () => {
+footerStory.add('simple', () => {
   return <Footer links={links} text="Duff Brewery" />;
 });
 
+
+//Header and Footer with Main in the Middle
 footerStory.add('header & footer', () => {
   return (
     <div>
