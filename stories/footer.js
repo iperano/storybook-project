@@ -40,7 +40,11 @@ footerStory.add('final', () => {
 footerStory.add('header & footer', () => {
   return (
     <div>
-      <Header>Bok</Header>
+      <Header
+        imgUrl="https://seeklogo.com/images/D/duff-beer-logo-3AA4218F1D-seeklogo.com.png"
+        class="" 
+        text="Duff Brewery">
+      </Header>;
       <Main></Main>
       <Footer links={links} text="Duff Brewery" />
     </div>
