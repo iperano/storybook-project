@@ -17,7 +17,7 @@ export default class Hyperlinkbutton
   }
 }
 
-Card.propTypes = {
+Hyperlinkbutton.propTypes = {
   imgUrl: PropTypes.string,
   name: PropTypes.string,
   tagline: PropTypes.string,
