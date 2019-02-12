@@ -1,23 +1,53 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './index.css';
+import style from './index.css';
 
 export default class Popup extends React.Component {
+  constructor() {
+    super();
+
+    this.state =
+		{
+		  tooltipClasses: [style.tooltiptext],
+		  setInitialState: false,
+		};
+
+    this.showTooltip = this.showTooltip.bind(this);
+    this.closeTooltip = this.closeTooltip.bind(this);
+  }
+
+  showTooltip() {
+    this.setState({
+      tooltipClasses: [style.tooltiptext, style.tooltip_show].join(' '),
+    });
+  }
+
+  closeTooltip() {
+    this.setState({
+      tooltipClasses: [style.tooltiptext],
+    });
+  }
+
   render() {
-    return (
-      <div className={styles.card}>
-        <img src={this.props.imgUrl} style={{ maxWidth: '200px', maxHeight: '200px' }} />
-        <div className={styles.container}>
-          <h4>{this.props.name}</h4>
-          <p>{this.props.tagline}</p>
-        </div>
-      </div>
+    const popupTooltip = (
+			<span className={this.state.tooltipClasses} id="myPopup">{this.props.tooltip}</span>
     );
+
+    const div = (
+			<div>
+				<div id="myModal" className={style.modal}>
+					<div className={[style.modal_content, style.tooltip].join(' ')} onMouseEnter={this.showTooltip} onMouseLeave={this.closeTooltip}>
+
+						{/* <div className={style.tooltip}> */}
+							{this.props.tooltip !== undefined ? popupTooltip : undefined}
+						{/* </div> */}
+
+						<span className={style.close} onClick={this.props.onClose}>&times;</span>
+						{this.props.children}
+					</div>
+				</div>
+			</div>
+    );
+
+    return div;
   }
 }
-
-Card.propTypes = {
-  imgUrl: PropTypes.string,
-  name: PropTypes.string,
-  tagline: PropTypes.string,
-};

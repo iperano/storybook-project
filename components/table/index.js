@@ -1,23 +1,49 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './index.css';
+import PropTypes from 'prop-types';
 
 export default class Table extends React.Component {
   render() {
-    return (
-      <div className={styles.card}>
-        <img src={this.props.imgUrl} style={{ maxWidth: '200px', maxHeight: '200px' }} />
-        <div className={styles.container}>
-          <h4>{this.props.name}</h4>
-          <p>{this.props.tagline}</p>
-        </div>
-      </div>
+    const table = (
+            <div>
+                <table className={styles.table}>
+                    <tbody>
+                        <tr key="headerRow">
+                            {
+                                this.props.headers.map((header, headerIndex) => (
+                                <th key={`header${  headerIndex}`}>{header.name}</th>
+
+                            ))
+                            }
+                            {this.props.onControlClick !== undefined ? <th></th> : undefined}
+                        </tr>
+                        {
+                            this.props.values.map((value, rowIndex) => (
+                              <tr key={`row${  rowIndex}`}>
+                                <td>{rowIndex + 1}</td>
+                                <td>{value.name}</td>
+                                <td>{value.desc}</td>
+                                <td>{value.number}</td>
+                                <td>
+                                  <img id={value.id} src={this.props.icon} className={styles.productIcon} onClick={this.props.onClick} />
+                                </td>
+                              </tr>
+
+                            ))
+                        }
+                    </tbody>
+                </table>
+            </div>
     );
+
+    return table;
   }
 }
 
-Card.propTypes = {
-  imgUrl: PropTypes.string,
-  name: PropTypes.string,
-  tagline: PropTypes.string,
+Table.propTypes = {
+  id: PropTypes.integer,
+  headers: PropTypes.array,
+  values: PropTypes.array,
+  onClick: PropTypes.func,
+  icon: PropTypes.string,
 };
