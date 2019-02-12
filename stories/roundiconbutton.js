@@ -9,7 +9,7 @@ const roundiconbuttonStory = storiesOf('Roundiconbutton', module);
 
 roundiconbuttonStory.add('simple', () => (
   <Roundiconbutton
-     imgUrl="http://icons.iconarchive.com/icons/iconsmind/outline/16/URL-Window-icon.png"
+     imgUrl="https://cdn3.iconfinder.com/data/icons/picons-social/57/51-linkedin-512.png"
      text="Round icon button "
   ></Roundiconbutton>
 ));

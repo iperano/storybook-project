@@ -14,7 +14,7 @@ export default class Footer extends React.Component {
           {
           <ul className={styles.footerLinks}>
             {
-              this.props.links.map(link => (<li key={link.id} className={link.active ? styles.active : undefined}>{link.content}</li>))
+              this.props.links.map(link => (<li key={link.id} className={link.active ? styles.active : undefined} >{link.content}</li>))
             }
           </ul>
           }

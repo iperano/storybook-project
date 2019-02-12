@@ -1,15 +1,24 @@
 
+.main {
+  background-color: green;
+  width: 150px;  
+  height: 32px;  
+  border-radius: 15px;
+  display: flex;
+
+}
+
 .roundiconbutton {
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   cursor: pointer;
   outline: none;
   color: #fff;
-  background-color: green;
   border: none;
-  border-radius: 15px;
-  width: 120px;
+  width: 150px;
   height: 32px;
+  background-color: green;
+  border-radius: 15px;
 }
 
 .roundiconbutton:disabled {
@@ -18,7 +27,7 @@
 }
 
 .roundiconbutton:hover {
-  background-color: #4CAF50; /* Green */
+  color: #3f3f3f;
 }
 
 .roundiconbutton:active {
@@ -30,4 +39,10 @@
 .roundiconbutton.inactive {
   background-color: rgb(233, 97, 97) !important;
   box-shadow: 0 9px #3f3f3f;
+}
+
+.logo {
+  max-width: 25px;
+  max-height: 25px;   
+  text-align: left; 
 }

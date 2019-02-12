@@ -6,9 +6,10 @@ export default class Roundiconbutton extends React.Component {
   render() {
     return (
       <div className={styles.main}>
-          <img src={this.props.imgUrl} className={styles.img} />
+          <img src={this.props.imgUrl} className={styles.logo} />
           <input onClick={this.props.onClick} className={styles.roundiconbutton} disabled={this.props.disabled} type='button' value={this.props.text} />
-      </div>
+        </div>
+
     );
   }
 }
@@ -18,4 +19,5 @@ Roundiconbutton.propTypes = {
   text: PropTypes.string,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
+  imgUrl: PropTypes.string,
 };
