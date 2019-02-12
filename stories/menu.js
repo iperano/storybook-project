@@ -3,15 +3,16 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 /* eslint-enable */
-import Navigation from '../components/navigation';
+import Menu from '../components/menu';
 
-const navigationmenuStory = storiesOf('Navigation Menu', module);
+const menuStory = storiesOf('Menu', module);
 
 const links = [
   {
     id: 1,
     content: <a href="http://google.com">Google</a>,
     active: true,
+    
   },
   {
     id: 2,
@@ -19,6 +20,6 @@ const links = [
   },
 ];
 
-navigationmenuStory.add('simple', () => {
-  return <Navigation links={links} />;
+menuStory.add('simple', () => {
+  return <Menu links={links} />;
 });

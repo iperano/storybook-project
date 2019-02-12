@@ -6,10 +6,10 @@ import styles from './index.css';
 export default class Menu extends React.Component {
   render() {
     return (
-      <div className={styles.navigation}>
+      <div className={styles.menu}>
         <ul>
           {
-            this.props.links.map(link => (<li key={link.id} id={link.id} name='menuMain' className={link.active ? styles.active : undefined}><a href={link.href}>{link.content} {link.number}</a></li>))
+            this.props.links.map(link => (<li key={link.id} id={link.id} name='menu' className={link.active ? styles.active : undefined}><a href={link.href}>{link.content} {link.number}</a></li>))
           }
         </ul>
       </div>

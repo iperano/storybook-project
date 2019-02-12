@@ -1,35 +1,42 @@
-.navigation ul {
+
+.menu ul {
   list-style-type: node;
-  margin: 0;
+
   margin-bottom: 80px;
   padding: 0;
   overflow: hidden;
   background-color:white;
-  width: 240px;
+  width: 200px;
 }
 
-.navigation li {
-    border: 1px solid silver;
-    
-    
+.menu li {
+  background-color:grey;
+  border: 1px;
+  border-style: solid;
+  border-color: white;
+
 }
 
-.navigation li a {
+.menu li a {
   display: inline-block;
-  padding: 10px 0px 10px 15px;
-  color:black;
+  background-color:rgb(184, 183, 183);
+  color: black;
   text-align: left;
   text-decoration: none;
-  width: 223px;
+  width: 200px;
+  height: 30px;
+
 }
 
-.navigation li:not(.active) a:hover {
-  background-color:blue;
+
+.menu:active{
+  background-color:white;
+}
+
+.menu li:not(.active) a:hover {
   color: white;
 }
 
-.active a {
-  background-color: blue;
-  color: white;
-  border: 1px solid silver;
+.menu a {
+
 }
