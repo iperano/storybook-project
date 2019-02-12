@@ -15,7 +15,7 @@ const links = [
   },
   {
     id: 2,
-    content: <a href="google.com">Moogle</a>,
+    content: <a href="google.com">Google</a>,
   },
 ];
 
