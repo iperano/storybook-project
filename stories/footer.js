@@ -30,6 +30,11 @@ const links = [
     content: <a href="http://linkedin.com"><img border="0" alt="LinkedIn" src="https://cdn3.iconfinder.com/data/icons/picons-social/57/51-linkedin-512.png" width="30" height="30"/></a>,
     active: true,
   },
+  {
+    id: 4,
+    content: <a href="http://github.com"><img border="0" alt="Github" src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_circle_black-512.png" width="30" height="30"/></a>,
+    active: true,
+  },
 ];
 
 
@@ -45,7 +50,9 @@ footerStory.add('header & footer', () => {
         class="" 
         text="Duff Brewery">
       </Header>;
-      <Main></Main>
+      <Main >
+        
+      </Main>
       <Footer links={links} text="Duff Brewery" />
     </div>
   )
